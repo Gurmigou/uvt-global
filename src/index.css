@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system: navy, soft stone neutrals and a muted copper accent. All colors are HSL. */
+
+@layer base {
+  :root {
+    --background: 30 14% 97%;
+    --foreground: 218 35% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 35% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 35% 14%;
+
+    --primary: 216 50% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 145 63% 42%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 30 12% 92%;
+    --muted-foreground: 218 12% 40%;
+
+    --accent: 145 63% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 8% 84%;
+    --input: 30 8% 84%;
+    --ring: 216 50% 22%;
+
+    --radius: 0.25rem;
+
+    --deep: 218 42% 13%;
+  }
+
+  .dark {
+    --background: 160 30% 7%;
+    --foreground: 40 25% 94%;
+    --card: 160 28% 10%;
+    --card-foreground: 40 25% 94%;
+    --popover: 160 28% 10%;
+    --popover-foreground: 40 25% 94%;
+    --primary: 158 40% 45%;
+    --primary-foreground: 160 30% 7%;
+    --secondary: 38 55% 55%;
+    --secondary-foreground: 160 30% 7%;
+    --muted: 160 20% 16%;
+    --muted-foreground: 40 12% 68%;
+    --accent: 38 55% 55%;
+    --accent-foreground: 160 30% 7%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 25% 94%;
+    --border: 160 18% 20%;
+    --input: 160 18% 20%;
+    --ring: 158 40% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif font-normal tracking-tight;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-secondary;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-8 bg-secondary;
+  }
+  .bg-deep {
+    background-color: hsl(var(--deep));
+  }
+}
+
+#lovable-badge {
+  display: none !important;
+}
