@@ -20,7 +20,7 @@ const Navbar = () => {
       {/* Top strip */}
       <div className="bg-deep text-primary-foreground/80 text-xs hidden md:block">
         <div className="container mx-auto px-4 h-8 flex items-center justify-between">
-          <span className="tracking-wide">Premium meat &amp; dairy exports · Established in 2024</span>
+          <span className="tracking-wide">Premium meat &amp; dairy · Established in 2024</span>
           <span className="tracking-wide">London, United Kingdom</span>
         </div>
       </div>
